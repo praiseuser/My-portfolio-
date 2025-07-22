@@ -332,8 +332,9 @@ const HomePage = () => {
                         </Typography>
 
                         <Typography sx={responsiveStyles.smallText}>
-                            I specialize in building modern, responsive, and high-performance web applications.
-                            With a strong passion for UI/UX, I transform ideas into elegant, interactive digital products.
+                            "I'm a young frontend developer passionate about building clean and responsive user interfaces.
+                            I work mainly with tools like React, MUI, and Tailwind to bring modern web designs to life.
+                            I enjoy turning ideas into real products that users can easily interact with."
                         </Typography>
 
                         {/* Buttons */}
@@ -391,7 +392,7 @@ const HomePage = () => {
                                     >
                                         {/* Cancel Icon */}
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor" d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7a1 1 0 1 0-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/>
+                                            <path fill="currentColor" d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7a1 1 0 1 0-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z" />
                                         </svg>
                                     </IconButton>
                                 </Box>
