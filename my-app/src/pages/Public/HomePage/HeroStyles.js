@@ -51,18 +51,18 @@ export const heroStyles = {
   },
   mobileDrawer: {
     position: 'absolute',
-    top: 0, // Adjusted to start from top for full visibility
+    top: 0,
     right: 0,
-    backgroundColor: '#0a192f', // Reverted to original for debug, overridden by PaperProps
+    backgroundColor: '#0a192f',
     color: 'white',
-    width: '80vw',
-    maxWidth: 300,
+    width: '70vw',
+    maxWidth: 250,
     padding: 2,
     borderRadius: '16px 0 0 16px',
     display: { xs: 'flex', md: 'none' },
     flexDirection: 'column',
     gap: 2,
-    zIndex: 1200, // Match PaperProps z-index
+    zIndex: 1200,
     boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
   },
   mainContent: {
@@ -128,10 +128,11 @@ export const heroStyles = {
     display: 'flex',
     gap: { xs: 2, sm: 3 },
     marginBottom: { xs: 3, sm: 4 },
-    flexDirection: { xs: 'column', sm: 'row' },
+    flexDirection: { xs: 'row', sm: 'row' }, // Changed to row for xs and sm
     width: { xs: '100%', sm: 'auto' },
     maxWidth: { xs: '300px', sm: 'none' },
-    justifyContent: 'center',
+    justifyContent: { xs: 'space-between', sm: 'space-between' }, // Equal spacing on both sides
+    alignItems: 'center', // Vertically center buttons
   },
   primaryButton: {
     backgroundColor: '#00BFFF',

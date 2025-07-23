@@ -16,8 +16,8 @@ const MobileDrawer = ({ mobileMenuOpen, setMobileMenuOpen }) => {
       PaperProps={{
         sx: {
           ...heroStyles.mobileDrawer,
-          backgroundColor: '#0a192f', // Reverted to original color
-          color: 'white', // Adjusted text color for contrast
+          backgroundColor: '#0a192f',
+          color: 'white',
         },
       }}
       BackdropProps={{
