@@ -16,12 +16,18 @@ const MobileDrawer = ({ mobileMenuOpen, setMobileMenuOpen }) => {
       PaperProps={{
         sx: {
           ...heroStyles.mobileDrawer,
-          backgroundColor: '#0a192f',
-          color: 'white',
+          backgroundColor: '#0a192f', // Reverted to original color
+          color: 'white', // Adjusted text color for contrast
+        },
+      }}
+      BackdropProps={{
+        sx: {
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          zIndex: 1100,
         },
       }}
     >
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, padding: 2 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, padding: 2, minHeight: '100vh' }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
           <IconButton
             aria-label="close drawer"
@@ -50,13 +56,13 @@ const MobileDrawer = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           </Typography>
         ))}
         <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
-          <IconButton sx={heroStyles.socialIcon}>
+          <IconButton sx={{ ...heroStyles.socialIcon, color: '#00BFFF', borderColor: 'rgba(0, 191, 255, 0.3)' }}>
             <FacebookIcon fontSize="small" />
           </IconButton>
-          <IconButton sx={heroStyles.socialIcon}>
+          <IconButton sx={{ ...heroStyles.socialIcon, color: '#00BFFF', borderColor: 'rgba(0, 191, 255, 0.3)' }}>
             <WhatsAppIcon fontSize="small" />
           </IconButton>
-          <IconButton sx={heroStyles.socialIcon}>
+          <IconButton sx={{ ...heroStyles.socialIcon, color: '#00BFFF', borderColor: 'rgba(0, 191, 255, 0.3)' }}>
             <InstagramIcon fontSize="small" />
           </IconButton>
         </Box>

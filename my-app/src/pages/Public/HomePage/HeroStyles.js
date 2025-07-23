@@ -8,6 +8,7 @@ export const heroStyles = {
     flexDirection: 'column',
     overflow: 'hidden',
     position: 'relative',
+    zIndex: 1,
   },
   header: {
     display: 'flex',
@@ -18,7 +19,7 @@ export const heroStyles = {
     margin: '0 auto',
     padding: { xs: '12px 8px', sm: '16px 12px', md: '20px 16px' },
     position: 'relative',
-    zIndex: 1001, // Ensure header stays above drawer
+    zIndex: 1001,
   },
   logo: {
     height: { xs: 35, sm: 45, md: 50 },
@@ -46,10 +47,23 @@ export const heroStyles = {
     padding: '8px',
   },
   mobileMenu: {
-    display: { xs: 'none', md: 'none' }, // Removed as we'll use Drawer
+    display: { xs: 'none', md: 'none' },
   },
   mobileDrawer: {
-    display: { xs: 'block', md: 'none' },
+    position: 'absolute',
+    top: 0, // Adjusted to start from top for full visibility
+    right: 0,
+    backgroundColor: '#0a192f', // Reverted to original for debug, overridden by PaperProps
+    color: 'white',
+    width: '80vw',
+    maxWidth: 300,
+    padding: 2,
+    borderRadius: '16px 0 0 16px',
+    display: { xs: 'flex', md: 'none' },
+    flexDirection: 'column',
+    gap: 2,
+    zIndex: 1200, // Match PaperProps z-index
+    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
   },
   mainContent: {
     display: 'flex',
@@ -117,7 +131,7 @@ export const heroStyles = {
     flexDirection: { xs: 'column', sm: 'row' },
     width: { xs: '100%', sm: 'auto' },
     maxWidth: { xs: '300px', sm: 'none' },
-    justifyContent: 'center', // Center buttons on small screens
+    justifyContent: 'center',
   },
   primaryButton: {
     backgroundColor: '#00BFFF',
@@ -182,21 +196,5 @@ export const heroStyles = {
     padding: '8px',
     '&:hover': { color: '#00BFFF', transform: 'rotate(180deg)' },
     transition: 'all 0.3s ease',
-  },
-  mobileDrawer: {
-    position: 'absolute',
-    top: '100%',
-    right: 0,
-    backgroundColor: '#0a192f',
-    color: 'white',
-    width: '80vw',
-    maxWidth: 300,
-    padding: 2,
-    borderRadius: '16px 0 0 16px',
-    display: { xs: 'flex', md: 'none' },
-    flexDirection: 'column',
-    gap: 2,
-    zIndex: 1000,
-    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
   },
 };
